@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from io import BytesIO
 from pathlib import Path
+import textwrap
 from xml.sax.saxutils import escape
 
 from pypdf import PdfReader, PdfWriter
@@ -13,6 +14,7 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
+from reportlab.pdfgen import canvas
 from reportlab.platypus import (
     KeepTogether,
     PageBreak,
@@ -111,7 +113,7 @@ def matrix(headers, rows, widths):
     return table
 
 
-def build_main(repo_url: str, target: Path) -> bytes:
+def build_main(repo_url: str, source_pages: int) -> bytes:
     stream = BytesIO()
     doc = SimpleDocTemplate(
         stream, pagesize=letter, leftMargin=inch, rightMargin=inch,
@@ -138,6 +140,7 @@ def build_main(repo_url: str, target: Path) -> bytes:
         ("Verificación funcional", "7"),
         ("Conclusiones y referencias", "8"),
         ("Anexo A. Maquetación de la Entrega 1", "9-14"),
+        ("Anexo B. Código fuente completo", f"15-{14 + source_pages}"),
     ]
     story.append(matrix(["Sección", "Página"], contents, [5.4 * inch, 1 * inch]))
     story += [Spacer(1, 0.3 * inch), para(
@@ -210,7 +213,7 @@ def build_main(repo_url: str, target: Path) -> bytes:
     # 6. Extractos reales, legibles y relacionados con la rúbrica.
     story += [heading("Código fuente representativo"),
               para("Los fragmentos siguientes proceden de app.js. El código íntegro, comentado por "
-                   "responsabilidades, se entrega en el repositorio indicado en la página 2."),
+                   "responsabilidades, figura en el Anexo B y en el repositorio de la página 2."),
               subheading("Carga dinámica de noticias desde JSON"),
               code_box('''const response = await fetch("data/noticias.json");
 if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -275,13 +278,73 @@ save(KEY.favorites, state.favorites);'''),
               Spacer(1, 0.15 * inch),
               para("<b>URL del código fuente:</b> " + escape(repo_url), "small"),
               para("<b>Anexo A:</b> Figuras 1 a 6 del informe de maquetación de la Entrega 1, "
-                   "incorporadas sin alterar los diseños originales.", "small")]
+                   "incorporadas sin alterar los diseños originales.", "small"),
+              para("<b>Anexo B:</b> Código fuente completo de las seis páginas, CSS, JavaScript "
+                   "y archivo de datos JSON.", "small")]
 
     doc.build(story, onFirstPage=page_number, onLaterPages=page_number)
     return stream.getvalue()
 
 
-def merge_mockups(main_pdf: bytes, output: Path):
+def build_source_appendix() -> bytes:
+    """Lista el código completo con nombre de archivo y números de línea legibles."""
+    files = [
+        "index.html", "noticias.html", "detalle.html", "favoritos.html",
+        "gestion.html", "contacto.html", "styles.css", "app.js", "data/noticias.json",
+    ]
+    stream = BytesIO()
+    c = canvas.Canvas(stream, pagesize=letter)
+    page = 15
+    y = 710
+
+    def start_page():
+        nonlocal y
+        c.setFillColor(INK)
+        c.setFont("Times-Roman", 10)
+        c.drawRightString(letter[0] - inch, letter[1] - 0.52 * inch, str(page))
+        c.setFont("Times-Bold", 12)
+        c.drawString(inch, 738, "Anexo B. Código fuente de PoliTechNews")
+        c.setStrokeColor(colors.HexColor("#c6d9e7"))
+        c.line(inch, 730, letter[0] - inch, 730)
+        y = 710
+
+    def next_page():
+        nonlocal page
+        c.showPage()
+        page += 1
+        start_page()
+
+    start_page()
+    for file_name in files:
+        if y < 95:
+            next_page()
+        c.setFont("Times-Bold", 10)
+        c.setFillColor(BLUE)
+        c.drawString(inch, y, file_name)
+        y -= 16
+        for number, raw in enumerate((ROOT / file_name).read_text(encoding="utf-8").splitlines(), 1):
+            wrapped = textwrap.wrap(raw.expandtabs(2), width=97, replace_whitespace=False,
+                                    drop_whitespace=False, break_long_words=True,
+                                    break_on_hyphens=False) or [""]
+            for part, chunk in enumerate(wrapped):
+                if y < 61:
+                    next_page()
+                    c.setFont("Times-Bold", 10)
+                    c.setFillColor(BLUE)
+                    c.drawString(inch, y, file_name + " (continuación)")
+                    y -= 16
+                c.setFont("Courier", 7.5)
+                c.setFillColor(GRAY)
+                c.drawRightString(92, y, str(number) if part == 0 else "")
+                c.setFillColor(INK)
+                c.drawString(100, y, chunk)
+                y -= 10.2
+        y -= 14
+    c.save()
+    return stream.getvalue()
+
+
+def merge_appendices(main_pdf: bytes, source_pdf: bytes, output: Path):
     main = PdfReader(BytesIO(main_pdf))
     original = PdfReader(str(SOURCE_PDF))
     if len(main.pages) != 8:
@@ -292,7 +355,6 @@ def merge_mockups(main_pdf: bytes, output: Path):
     for sequence, index in enumerate(range(9, 15), start=9):
         page = original.pages[index]
         overlay = BytesIO()
-        from reportlab.pdfgen import canvas
         c = canvas.Canvas(overlay, pagesize=letter)
         c.setFillColor(colors.white)
         c.rect(490, 738, 90, 30, stroke=0, fill=1)
@@ -302,6 +364,8 @@ def merge_mockups(main_pdf: bytes, output: Path):
         c.save()
         overlay.seek(0)
         page.merge_page(PdfReader(overlay).pages[0])
+        writer.add_page(page)
+    for page in PdfReader(BytesIO(source_pdf)).pages:
         writer.add_page(page)
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("wb") as file:
@@ -314,5 +378,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     repo_url = args.repo or "Pendiente de creación en GitHub"
     target = FINAL_PDF if args.repo else DRAFT_PDF
-    merge_mockups(build_main(repo_url, target), target)
+    appendix = build_source_appendix()
+    merge_appendices(build_main(repo_url, len(PdfReader(BytesIO(appendix)).pages)), appendix, target)
     print(target)
