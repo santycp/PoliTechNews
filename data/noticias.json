@@ -1,0 +1,182 @@
+[
+  {
+    "id": "ia-aulas",
+    "title": "La IA transforma los procesos de aprendizaje",
+    "category": "Inteligencia Artificial",
+    "summary": "Herramientas que apoyan la investigación, la creatividad y el trabajo colaborativo.",
+    "date": "2026-09-12",
+    "minutes": 5,
+    "image": "assets/images/ia.png",
+    "author": "Mariana Castillo",
+    "content": [
+      "La inteligencia artificial ya forma parte de múltiples experiencias académicas. Asistentes de estudio, plataformas adaptativas y herramientas de análisis ayudan a estudiantes y docentes a comprender mejor sus procesos de aprendizaje.",
+      "Su valor no está en reemplazar la labor humana, sino en ampliar las posibilidades: ofrecer retroalimentación oportuna, identificar dificultades y facilitar el acceso a recursos especializados desde distintos contextos y dispositivos.",
+      "El desafío es usar estas herramientas con criterio, transparencia y respeto por la privacidad. La alfabetización digital y el pensamiento crítico seguirán siendo esenciales para construir una innovación verdaderamente responsable."
+    ]
+  },
+  {
+    "id": "campus-nube",
+    "title": "Servicios en la nube para campus conectados",
+    "category": "Cloud",
+    "summary": "Acceso seguro a laboratorios virtuales y recursos académicos desde cualquier lugar.",
+    "date": "2026-09-11",
+    "minutes": 4,
+    "image": "assets/images/cloud.png",
+    "author": "Equipo PoliTechNews",
+    "content": [
+      "Los servicios en la nube permiten que estudiantes y docentes consulten materiales, ejecuten prácticas y colaboren sin depender de un único equipo físico.",
+      "Para aprovecharlos, una institución necesita gestionar permisos, respaldos y disponibilidad. La experiencia debe ser sencilla para quienes estudian y segura para quienes administran la información.",
+      "Un campus conectado combina acceso flexible con buenas prácticas de protección de datos y acompañamiento técnico."
+    ]
+  },
+  {
+    "id": "frontend-moderno",
+    "title": "Front-end moderno del diseño al código",
+    "category": "Desarrollo",
+    "summary": "Buenas prácticas para crear interfaces rápidas, accesibles y mantenibles.",
+    "date": "2026-09-10",
+    "minutes": 7,
+    "image": "assets/images/desarrollo.png",
+    "author": "Daniel Ríos",
+    "content": [
+      "Una interfaz bien construida comienza con una estructura semántica y una jerarquía visual clara. El diseño debe transformarse en componentes que conserven su intención en distintos tamaños de pantalla.",
+      "CSS moderno permite distribuir el contenido sin depender de posiciones rígidas. JavaScript aporta interacción cuando existe una necesidad concreta, como filtrar, guardar o validar información.",
+      "El resultado se comprueba con pruebas de navegación, accesibilidad y rendimiento, no solo con una comparación visual."
+    ]
+  },
+  {
+    "id": "datos-abiertos",
+    "title": "Datos abiertos que impulsan la investigación universitaria",
+    "category": "Datos",
+    "summary": "Cómo compartir información facilita nuevos proyectos académicos.",
+    "date": "2026-09-08",
+    "minutes": 6,
+    "image": "assets/images/datos.png",
+    "author": "Valentina Gómez",
+    "content": [
+      "Los datos abiertos pueden ayudar a contrastar hipótesis, reproducir resultados y conectar proyectos de distintas áreas del conocimiento.",
+      "Su publicación exige documentación clara, formatos reutilizables y revisión de información sensible. Abrir datos no significa ignorar la privacidad.",
+      "Cuando los conjuntos de datos se mantienen actualizados y explicados, la comunidad académica puede convertirlos en preguntas e investigaciones más sólidas."
+    ]
+  },
+  {
+    "id": "identidad-digital",
+    "title": "Protege tu identidad digital dentro y fuera del campus",
+    "category": "Ciberseguridad",
+    "summary": "Consejos para reconocer riesgos, evitar fraudes y proteger tus cuentas personales.",
+    "date": "2026-09-09",
+    "minutes": 5,
+    "image": "assets/images/ciberseguridad.png",
+    "author": "Laura Martínez",
+    "content": [
+      "La vida universitaria depende cada vez más de cuentas digitales: correo, aulas virtuales, bibliotecas y herramientas colaborativas. Proteger esas credenciales reduce el riesgo de pérdida de información.",
+      "Usar contraseñas únicas, activar la verificación en dos pasos y revisar con atención los enlaces recibidos son medidas sencillas con impacto real.",
+      "Ante un mensaje sospechoso, es preferible consultar directamente el canal oficial antes de compartir datos o descargar archivos."
+    ]
+  },
+  {
+    "id": "tecnologia-impacto",
+    "title": "Tecnología con impacto social y ambiental",
+    "category": "Innovación",
+    "summary": "Proyectos estudiantiles que responden a desafíos reales de nuestro entorno.",
+    "date": "2026-09-07",
+    "minutes": 6,
+    "image": "assets/images/innovacion.png",
+    "author": "Equipo PoliTechNews",
+    "content": [
+      "La innovación universitaria puede comenzar con problemas cercanos: consumo de energía, movilidad, acceso a información o participación comunitaria.",
+      "Los equipos que trabajan con usuarios reales comprenden mejor el contexto y pueden medir si una solución tecnológica es útil, sostenible y fácil de adoptar.",
+      "El impacto aparece cuando las ideas se prueban, se ajustan y se comparten con quienes las necesitan."
+    ]
+  },
+  {
+    "id": "laboratorios-virtuales",
+    "title": "Laboratorios virtuales amplían la práctica académica",
+    "category": "Cloud",
+    "summary": "Entornos remotos permiten experimentar y aprender sin instalar software complejo.",
+    "date": "2026-09-06",
+    "minutes": 4,
+    "image": "assets/images/cloud.png",
+    "author": "Camilo Pérez",
+    "content": [
+      "Un laboratorio virtual ofrece herramientas preparadas para una actividad específica. El estudiante puede concentrarse en experimentar en lugar de resolver conflictos de instalación.",
+      "La disponibilidad remota favorece la continuidad de las clases y facilita compartir ejercicios entre equipos.",
+      "Su diseño debe considerar el acceso desde conexiones modestas y la protección de los trabajos realizados."
+    ]
+  },
+  {
+    "id": "accesibilidad-web",
+    "title": "Interfaces accesibles para todas las personas",
+    "category": "Desarrollo",
+    "summary": "Principios para diseñar productos que incluyan diferentes formas de interacción.",
+    "date": "2026-09-05",
+    "minutes": 7,
+    "image": "assets/images/desarrollo.png",
+    "author": "Daniel Ríos",
+    "content": [
+      "Una interfaz accesible permite recorrer el contenido con teclado, comprender los controles y distinguir la información incluso cuando cambia el tamaño del texto.",
+      "Las etiquetas de los formularios, el contraste y los mensajes de error claros benefician a personas con distintas necesidades y también mejoran la experiencia general.",
+      "La accesibilidad se evalúa durante todo el desarrollo, no únicamente al final."
+    ]
+  },
+  {
+    "id": "analitica-educativa",
+    "title": "Analítica educativa para tomar mejores decisiones",
+    "category": "Datos",
+    "summary": "Indicadores responsables ayudan a comprender necesidades de aprendizaje.",
+    "date": "2026-09-04",
+    "minutes": 5,
+    "image": "assets/images/datos.png",
+    "author": "Valentina Gómez",
+    "content": [
+      "Los datos de actividad académica pueden mostrar patrones que no son visibles en una sola clase. Su interpretación requiere contexto y conversaciones con estudiantes y docentes.",
+      "Las métricas deben apoyar decisiones pedagógicas, no sustituirlas. La privacidad y la explicación de cómo se usan los datos son condiciones indispensables.",
+      "Una buena visualización ayuda a plantear preguntas concretas y a revisar si una intervención funciona."
+    ]
+  },
+  {
+    "id": "seguridad-contrasenas",
+    "title": "Contraseñas más seguras para la vida universitaria",
+    "category": "Ciberseguridad",
+    "summary": "Pasos sencillos para fortalecer el acceso a plataformas académicas.",
+    "date": "2026-09-03",
+    "minutes": 4,
+    "image": "assets/images/ciberseguridad.png",
+    "author": "Laura Martínez",
+    "content": [
+      "Reutilizar una misma contraseña expone varias cuentas si un servicio sufre una filtración. Un gestor de contraseñas ayuda a crear claves distintas y difíciles de adivinar.",
+      "La verificación en dos pasos añade una barrera adicional y conviene activarla en el correo y las plataformas más importantes.",
+      "En equipos compartidos, cerrar sesión y evitar guardar credenciales son hábitos igual de relevantes."
+    ]
+  },
+  {
+    "id": "proyectos-ia",
+    "title": "Proyectos de IA creados por estudiantes",
+    "category": "Inteligencia Artificial",
+    "summary": "Ideas académicas muestran cómo aplicar modelos a problemas cercanos.",
+    "date": "2026-09-02",
+    "minutes": 6,
+    "image": "assets/images/ia.png",
+    "author": "Mariana Castillo",
+    "content": [
+      "Los proyectos de aula son una oportunidad para experimentar con inteligencia artificial y evaluar sus límites en situaciones concretas.",
+      "Documentar los datos, explicar las decisiones del modelo y escuchar a las personas afectadas mejora la calidad del trabajo.",
+      "El aprendizaje más valioso no suele ser solo lograr que un modelo funcione, sino comprender cuándo es apropiado usarlo."
+    ]
+  },
+  {
+    "id": "comunidad-codigo",
+    "title": "Comunidades de código que aprenden juntas",
+    "category": "Desarrollo",
+    "summary": "Colaborar en proyectos pequeños fortalece habilidades técnicas y de comunicación.",
+    "date": "2026-09-01",
+    "minutes": 5,
+    "image": "assets/images/desarrollo.png",
+    "author": "Equipo PoliTechNews",
+    "content": [
+      "Un grupo de estudio puede transformar dudas individuales en soluciones compartidas. Revisar código y explicar decisiones permite aprender de formas distintas.",
+      "Los proyectos abiertos requieren acuerdos sencillos: objetivos claros, tareas pequeñas y respeto por las contribuciones de cada integrante.",
+      "La colaboración sostenida ayuda a construir portafolios y a mantener el interés por aprender."
+    ]
+  }
+]

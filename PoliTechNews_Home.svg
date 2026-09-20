@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2360" viewBox="0 0 1440 2360">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071B3B"/>
+      <stop offset="0.55" stop-color="#0B3A72"/>
+      <stop offset="1" stop-color="#087E9B"/>
+    </linearGradient>
+    <linearGradient id="art1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B3A72"/><stop offset="1" stop-color="#1ED6D0"/>
+    </linearGradient>
+    <linearGradient id="art2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#182A5A"/><stop offset="1" stop-color="#5979FF"/>
+    </linearGradient>
+    <linearGradient id="art3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A7688"/><stop offset="1" stop-color="#6DE6C4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#061A3A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="2360" fill="#F6F8FC"/>
+
+  <!-- Header -->
+  <g id="Header">
+    <rect width="1440" height="92" fill="#FFFFFF"/>
+    <path d="M0 91.5H1440" stroke="#E4EAF3"/>
+    <g transform="translate(96 24)">
+      <rect width="44" height="44" rx="12" fill="#0B3A72"/>
+      <path d="M13 29V15h10c6 0 10 3 10 8s-4 8-10 8h-4" fill="none" stroke="#31D8D1" stroke-width="4" stroke-linecap="round"/>
+      <text x="58" y="29" font-family="Poppins" font-size="24" font-weight="700" fill="#071B3B">PoliTech<tspan fill="#0D9FB0">News</tspan></text>
+    </g>
+    <g font-family="Inter" font-size="15" font-weight="600" fill="#44546A">
+      <text x="674" y="55" fill="#0B3A72">Inicio</text>
+      <rect x="671" y="70" width="45" height="3" rx="1.5" fill="#1AC6C0"/>
+      <text x="754" y="55">Noticias</text>
+      <text x="850" y="55">Favoritos</text>
+      <text x="950" y="55">Gestionar</text>
+      <text x="1054" y="55">Contacto</text>
+    </g>
+    <g transform="translate(1175 24)">
+      <rect width="169" height="44" rx="12" fill="#0B3A72"/>
+      <text x="84.5" y="28" text-anchor="middle" font-family="Inter" font-size="14" font-weight="700" fill="#FFFFFF">Explorar noticias</text>
+    </g>
+  </g>
+
+  <!-- Hero -->
+  <g id="Hero" transform="translate(64 124)">
+    <rect width="1312" height="566" rx="32" fill="url(#hero)"/>
+    <circle cx="1120" cy="100" r="180" fill="#1ED6D0" opacity="0.12" filter="url(#soft)"/>
+    <circle cx="890" cy="500" r="170" fill="#5979FF" opacity="0.18" filter="url(#soft)"/>
+    <g transform="translate(72 80)">
+      <g>
+        <rect width="235" height="34" rx="17" fill="#FFFFFF" opacity="0.12"/>
+        <circle cx="18" cy="17" r="5" fill="#31D8D1"/>
+        <text x="34" y="22" font-family="Inter" font-size="13" font-weight="700" letter-spacing="1.2" fill="#CFFAF7">PERIÓDICO UNIVERSITARIO</text>
+      </g>
+      <text y="104" font-family="Poppins" font-size="58" font-weight="700" fill="#FFFFFF">Tecnología que</text>
+      <text y="172" font-family="Poppins" font-size="58" font-weight="700" fill="#FFFFFF">transforma el futuro.</text>
+      <text y="225" font-family="Inter" font-size="19" fill="#D4E5F5">Noticias, análisis y tendencias sobre inteligencia artificial,</text>
+      <text y="255" font-family="Inter" font-size="19" fill="#D4E5F5">desarrollo, datos, nube y ciberseguridad.</text>
+      <g transform="translate(0 305)">
+        <rect width="188" height="54" rx="14" fill="#1ED6D0"/>
+        <text x="94" y="34" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#071B3B">Explorar noticias →</text>
+        <rect x="204" width="156" height="54" rx="14" fill="none" stroke="#9EC4DF"/>
+        <text x="282" y="34" text-anchor="middle" font-family="Inter" font-size="15" font-weight="600" fill="#FFFFFF">Conócenos</text>
+      </g>
+      <g transform="translate(0 407)" font-family="Inter">
+        <text font-size="12" font-weight="700" letter-spacing="1" fill="#8FB7D5">ACTUALIZADO HOY</text>
+        <text x="128" font-size="13" fill="#FFFFFF">12 de septiembre de 2026</text>
+      </g>
+    </g>
+    <g id="HeroIllustration" transform="translate(790 64)">
+      <rect x="60" y="28" width="380" height="420" rx="30" fill="#FFFFFF" opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.22"/>
+      <rect x="94" y="64" width="312" height="64" rx="16" fill="#FFFFFF" opacity="0.10"/>
+      <circle cx="126" cy="96" r="16" fill="#31D8D1"/>
+      <path d="M120 96l5 5 9-11" fill="none" stroke="#071B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="158" y="84" width="152" height="10" rx="5" fill="#FFFFFF" opacity="0.75"/>
+      <rect x="158" y="103" width="112" height="7" rx="3.5" fill="#A4C7DE" opacity="0.65"/>
+      <rect x="94" y="150" width="148" height="118" rx="18" fill="#5979FF" opacity="0.75"/>
+      <path d="M126 235l28-36 22 19 34-46" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="210" cy="172" r="6" fill="#31D8D1"/>
+      <rect x="258" y="150" width="148" height="118" rx="18" fill="#1ED6D0" opacity="0.82"/>
+      <circle cx="332" cy="209" r="34" fill="none" stroke="#071B3B" stroke-width="10" opacity="0.8"/>
+      <path d="M332 175a34 34 0 0127 14" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+      <rect x="94" y="290" width="312" height="120" rx="18" fill="#FFFFFF" opacity="0.10"/>
+      <rect x="122" y="322" width="180" height="11" rx="5.5" fill="#FFFFFF" opacity="0.75"/>
+      <rect x="122" y="346" width="244" height="8" rx="4" fill="#9EC4DF" opacity="0.7"/>
+      <rect x="122" y="366" width="202" height="8" rx="4" fill="#9EC4DF" opacity="0.45"/>
+    </g>
+  </g>
+
+  <!-- Highlights -->
+  <g id="NoticiasDestacadas" transform="translate(96 770)">
+    <text y="22" font-family="Inter" font-size="13" font-weight="700" letter-spacing="1.6" fill="#0D9FB0">LO MÁS RECIENTE</text>
+    <text y="70" font-family="Poppins" font-size="36" font-weight="700" fill="#071B3B">Noticias destacadas</text>
+    <text x="0" y="104" font-family="Inter" font-size="16" fill="#607087">Una selección para entender las ideas que están moviendo el mundo digital.</text>
+    <text x="1117" y="70" font-family="Inter" font-size="15" font-weight="700" fill="#0B3A72">Ver todas →</text>
+
+    <g id="CardIA" transform="translate(0 148)" filter="url(#shadow)">
+      <rect width="392" height="480" rx="24" fill="#FFFFFF"/>
+      <path d="M0 24Q0 0 24 0H368Q392 0 392 24V210H0Z" fill="url(#art1)"/>
+      <circle cx="196" cy="104" r="56" fill="#FFFFFF" opacity="0.13"/>
+      <g fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.9">
+        <circle cx="196" cy="104" r="26"/><path d="M196 62v16M196 130v16M154 104h16M222 104h16M166 74l12 12M214 122l12 12M226 74l-12 12M178 122l-12 12"/>
+      </g>
+      <rect x="24" y="232" width="154" height="28" rx="14" fill="#E5FAF8"/>
+      <text x="101" y="251" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="#087E9B">INTELIGENCIA ARTIFICIAL</text>
+      <text x="24" y="302" font-family="Poppins" font-size="22" font-weight="700" fill="#071B3B">La IA llega a las aulas</text>
+      <text x="24" y="330" font-family="Poppins" font-size="22" font-weight="700" fill="#071B3B">universitarias</text>
+      <text x="24" y="369" font-family="Inter" font-size="15" fill="#607087">Nuevas herramientas impulsan el aprendizaje</text>
+      <text x="24" y="392" font-family="Inter" font-size="15" fill="#607087">personalizado y la investigación académica.</text>
+      <path d="M24 423H368" stroke="#E7ECF3"/>
+      <text x="24" y="454" font-family="Inter" font-size="13" fill="#7C899B">Hace 2 horas · 5 min</text>
+      <text x="292" y="454" font-family="Inter" font-size="14" font-weight="700" fill="#0B3A72">Leer más →</text>
+    </g>
+
+    <g id="CardCloud" transform="translate(424 148)" filter="url(#shadow)">
+      <rect width="392" height="480" rx="24" fill="#FFFFFF"/>
+      <path d="M0 24Q0 0 24 0H368Q392 0 392 24V210H0Z" fill="url(#art2)"/>
+      <g transform="translate(112 64)">
+        <path d="M44 88h103c22 0 39-15 39-35 0-19-15-34-34-35C143-3 116-11 95 2 82 10 73 23 70 38 48 34 28 50 28 71c0 6 2 12 5 17z" fill="#FFFFFF" opacity="0.9"/>
+        <path d="M79 116h62M92 136h36" stroke="#31D8D1" stroke-width="8" stroke-linecap="round"/>
+      </g>
+      <rect x="24" y="232" width="114" height="28" rx="14" fill="#EEF1FF"/>
+      <text x="81" y="251" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="#4259C5">CLOUD</text>
+      <text x="24" y="302" font-family="Poppins" font-size="22" font-weight="700" fill="#071B3B">Campus inteligentes</text>
+      <text x="24" y="330" font-family="Poppins" font-size="22" font-weight="700" fill="#071B3B">con servicios en la nube</text>
+      <text x="24" y="369" font-family="Inter" font-size="15" fill="#607087">La nube mejora el acceso a laboratorios,</text>
+      <text x="24" y="392" font-family="Inter" font-size="15" fill="#607087">recursos y plataformas educativas.</text>
+      <path d="M24 423H368" stroke="#E7ECF3"/>
+      <text x="24" y="454" font-family="Inter" font-size="13" fill="#7C899B">Ayer · 4 min</text>
+      <text x="292" y="454" font-family="Inter" font-size="14" font-weight="700" fill="#0B3A72">Leer más →</text>
+    </g>
+
+    <g id="CardDev" transform="translate(848 148)" filter="url(#shadow)">
+      <rect width="392" height="480" rx="24" fill="#FFFFFF"/>
+      <path d="M0 24Q0 0 24 0H368Q392 0 392 24V210H0Z" fill="url(#art3)"/>
+      <g transform="translate(106 58)" fill="none" stroke="#071B3B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 26L20 74l40 48M120 26l40 48-40 48M104 8L76 140"/>
+      </g>
+      <rect x="24" y="232" width="126" height="28" rx="14" fill="#E5FAF8"/>
+      <text x="87" y="251" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="#087E9B">DESARROLLO</text>
+      <text x="24" y="302" font-family="Poppins" font-size="22" font-weight="700" fill="#071B3B">Front-end moderno:</text>
+      <text x="24" y="330" font-family="Poppins" font-size="22" font-weight="700" fill="#071B3B">del diseño al código</text>
+      <text x="24" y="369" font-family="Inter" font-size="15" fill="#607087">Buenas prácticas para crear interfaces</text>
+      <text x="24" y="392" font-family="Inter" font-size="15" fill="#607087">rápidas, accesibles y mantenibles.</text>
+      <path d="M24 423H368" stroke="#E7ECF3"/>
+      <text x="24" y="454" font-family="Inter" font-size="13" fill="#7C899B">8 sep · 7 min</text>
+      <text x="292" y="454" font-family="Inter" font-size="14" font-weight="700" fill="#0B3A72">Leer más →</text>
+    </g>
+  </g>
+
+  <!-- Categories -->
+  <g id="Categorias" transform="translate(0 1440)">
+    <rect width="1440" height="300" fill="#FFFFFF"/>
+    <text x="720" y="76" text-anchor="middle" font-family="Poppins" font-size="31" font-weight="700" fill="#071B3B">Explora por categorías</text>
+    <text x="720" y="112" text-anchor="middle" font-family="Inter" font-size="16" fill="#607087">Encuentra el tema que necesitas para aprender, investigar o inspirarte.</text>
+    <g transform="translate(174 158)" font-family="Inter" font-size="15" font-weight="700">
+      <g><rect width="220" height="64" rx="18" fill="#E5FAF8"/><circle cx="32" cy="32" r="12" fill="#1AC6C0"/><text x="58" y="38" fill="#075D70">Inteligencia Artificial</text></g>
+      <g transform="translate(238)"><rect width="190" height="64" rx="18" fill="#EEF1FF"/><circle cx="32" cy="32" r="12" fill="#5979FF"/><text x="58" y="38" fill="#34479E">Desarrollo</text></g>
+      <g transform="translate(446)"><rect width="164" height="64" rx="18" fill="#EAF3FF"/><circle cx="32" cy="32" r="12" fill="#2B78C5"/><text x="58" y="38" fill="#225A93">Cloud</text></g>
+      <g transform="translate(628)"><rect width="156" height="64" rx="18" fill="#F3EEFF"/><circle cx="32" cy="32" r="12" fill="#8A5BD5"/><text x="58" y="38" fill="#6641A4">Datos</text></g>
+      <g transform="translate(802)"><rect width="258" height="64" rx="18" fill="#FFF1E8"/><circle cx="32" cy="32" r="12" fill="#F28A45"/><text x="58" y="38" fill="#9D5426">Ciberseguridad</text></g>
+    </g>
+  </g>
+
+  <!-- Information + CTA -->
+  <g id="Informacion" transform="translate(96 1810)">
+    <rect width="1248" height="300" rx="28" fill="#071B3B"/>
+    <circle cx="1115" cy="65" r="170" fill="#1AC6C0" opacity="0.13"/>
+    <circle cx="1025" cy="300" r="145" fill="#5979FF" opacity="0.16"/>
+    <g transform="translate(64 60)">
+      <text y="28" font-family="Inter" font-size="13" font-weight="700" letter-spacing="1.5" fill="#31D8D1">COMUNIDAD POLITÉCNICA</text>
+      <text y="80" font-family="Poppins" font-size="34" font-weight="700" fill="#FFFFFF">Información tecnológica</text>
+      <text y="122" font-family="Poppins" font-size="34" font-weight="700" fill="#FFFFFF">en un solo lugar.</text>
+      <text y="168" font-family="Inter" font-size="16" fill="#BDD4E8">Contenido claro, relevante y conectado con la vida universitaria.</text>
+    </g>
+    <g transform="translate(920 104)">
+      <rect width="248" height="56" rx="15" fill="#1ED6D0"/>
+      <text x="124" y="35" text-anchor="middle" font-family="Inter" font-size="15" font-weight="700" fill="#071B3B">Descubrir PoliTechNews →</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g id="Footer" transform="translate(0 2180)">
+    <rect width="1440" height="180" fill="#FFFFFF"/>
+    <g transform="translate(96 44)">
+      <text font-family="Poppins" font-size="22" font-weight="700" fill="#071B3B">PoliTech<tspan fill="#0D9FB0">News</tspan></text>
+      <text y="32" font-family="Inter" font-size="13" fill="#607087">Conectando conocimiento, tecnología y futuro.</text>
+      <text y="84" font-family="Inter" font-size="12" fill="#8A97A9">© 2026 PoliTechNews · Proyecto académico universitario</text>
+    </g>
+    <g transform="translate(760 44)" font-family="Inter" font-size="14">
+      <text font-weight="700" fill="#071B3B">Navegación</text>
+      <text y="30" fill="#607087">Inicio · Noticias · Favoritos</text>
+      <text y="56" fill="#607087">Gestionar · Contacto</text>
+    </g>
+    <g transform="translate(1120 44)" font-family="Inter" font-size="14">
+      <text font-weight="700" fill="#071B3B">Contacto</text>
+      <text y="30" fill="#607087">contacto@politechnews.edu.co</text>
+      <text y="56" fill="#607087">Bogotá, Colombia</text>
+    </g>
+  </g>
+</svg>
