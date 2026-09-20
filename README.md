@@ -2,6 +2,8 @@
 
 Primera versión funcional del periódico digital universitario. Está construida con HTML semántico, CSS y JavaScript sin dependencias de ejecución. Las noticias iniciales se cargan dinámicamente desde `data/noticias.json`.
 
+Repositorio académico: [github.com/santycp/PoliTechNews](https://github.com/santycp/PoliTechNews). Informe final: [`output/pdf/PoliTechNews_Entrega_2.pdf`](output/pdf/PoliTechNews_Entrega_2.pdf).
+
 ## Ejecutar localmente
 
 Desde esta carpeta:
