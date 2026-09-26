@@ -4,6 +4,8 @@ Primera versión funcional del periódico digital universitario. Está construid
 
 Repositorio académico: [github.com/santycp/PoliTechNews](https://github.com/santycp/PoliTechNews). Informe final: [`output/pdf/PoliTechNews_Entrega_2.pdf`](output/pdf/PoliTechNews_Entrega_2.pdf).
 
+Documentación técnica en normas APA: [PDF](output/pdf/PoliTechNews_Documentacion_Tecnica.pdf) y [Word editable](output/docx/PoliTechNews_Documentacion_Tecnica.docx). Incluye arquitectura, distribución del repositorio, explicación de archivos y funciones, modelo de datos, persistencia, validaciones, pruebas y mantenimiento.
+
 ## Ejecutar localmente
 
 Desde esta carpeta:
