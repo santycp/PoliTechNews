@@ -1,4 +1,56 @@
-# PoliTechNews - Entrega 2
+# PoliTechNews - Entrega 3
+
+Aplicación Angular 22 para consultar noticias tecnológicas universitarias. Conserva la identidad visual de los mockups y las funcionalidades de la Entrega 2. Las vistas están organizadas en componentes standalone, con rutas, binding, formularios reactivos y servicios compartidos.
+
+## Ejecutar Angular
+
+Requisitos: Node.js 24.15 o posterior de la rama 24, y npm.
+
+```bash
+npm ci
+npm start
+```
+
+Abre [http://127.0.0.1:4200](http://127.0.0.1:4200). Para compilar y probar la versión de producción:
+
+```bash
+npm run build
+npm test
+```
+
+La prueba usa Chrome si está instalado en la ruta predeterminada de Windows. En otros entornos ejecuta antes `npx playwright install chromium`.
+
+## Arquitectura Angular
+
+```text
+src/main.ts                  Arranque de la aplicación
+src/app/app.config.ts        HttpClient, Router e inicialización
+src/app/app.routes.ts        Seis rutas con carga diferida
+src/app/app.component.*      Encabezado, menú, pie y avisos
+src/app/core/                Modelo, datos, Storage y validadores
+src/app/shared/              Tarjetas, banners, paginación y estados vacíos
+src/app/pages/               Inicio, Noticias, Detalle, Favoritos, Gestión y Contacto
+data/noticias.json           Catálogo inicial compartido con la Entrega 2
+assets/images/              Recursos originales del diseño
+tests/smoke-angular.cjs      Prueba de aceptación sobre dist
+.github/workflows/pages.yml  Compilación, pruebas y despliegue
+```
+
+`NewsService` carga y valida el JSON con HttpClient. Las señales (`signal`) y valores derivados (`computed`) mantienen las vistas sincronizadas con favoritos, publicaciones y eliminaciones. `StorageService` conserva las claves de la versión anterior y valida su contenido al leerlo. Las plantillas usan interpolación `{{ }}`, propiedades `[disabled]`, eventos `(click)` y formularios `[formGroup]`; la búsqueda y el orden usan `ngModel`.
+
+Los formularios rechazan entradas vacías, correo inválido, longitudes incorrectas e imágenes incompatibles o mayores de 1 MB. Un borrador puede publicarse desde Gestión. Los favoritos se ordenan por fecha de publicación. No se usan cadenas HTML editables ni `innerHTML` en el nuevo código.
+
+Los favoritos y cambios editoriales siguen siendo locales al navegador. Contacto valida y muestra confirmación; no envía correos. La guía permite este alcance con JSON y Web Storage.
+
+## Publicación
+
+Destino: [PoliTechNews en GitHub Pages](https://santycp.github.io/PoliTechNews/).
+
+El flujo `pages.yml` ejecuta `npm ci`, compila con `--base-href /PoliTechNews/`, prueba la aplicación bajo ese prefijo y publica el resultado. El origen de Pages se configura como **GitHub Actions**. Las rutas usan hash (`#/noticias/ia-aulas`) para que las recargas funcionen en alojamiento estático. Los pushes que solo cambian documentos no reconstruyen el sitio; se puede ejecutar el flujo manualmente.
+
+La Entrega 3 requiere un PDF final y un video de YouTube de máximo 3 minutos. El video debe grabarse y publicarse por el estudiante; el guion se encuentra en [docs/Guion_Video_Entrega_3.md](docs/Guion_Video_Entrega_3.md).
+
+## Versión conservada de la Entrega 2
 
 Primera versión funcional del periódico digital universitario. Está construida con HTML semántico, CSS y JavaScript sin dependencias de ejecución. Las noticias iniciales se cargan dinámicamente desde `data/noticias.json`.
 
@@ -6,7 +58,7 @@ Repositorio académico: [github.com/santycp/PoliTechNews](https://github.com/san
 
 Documentación técnica en normas APA: [PDF](output/pdf/PoliTechNews_Documentacion_Tecnica.pdf) y [Word editable](output/docx/PoliTechNews_Documentacion_Tecnica.docx). Incluye arquitectura, distribución del repositorio, explicación de archivos y funciones, modelo de datos, persistencia, validaciones, pruebas y mantenimiento.
 
-## Ejecutar localmente
+### Ejecutar el prototipo anterior
 
 Desde esta carpeta:
 

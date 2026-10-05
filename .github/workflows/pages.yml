@@ -1,0 +1,49 @@
+name: Verificar y publicar PoliTechNews
+
+on:
+  push:
+    branches: [main]
+    paths: ['src/**', 'assets/**', 'data/**', 'styles.css', 'package*.json', 'angular.json', 'tsconfig*.json', 'tests/smoke-angular.cjs', '.github/workflows/pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build:pages
+      - run: npx playwright install --with-deps chromium
+      - name: Probar la compilación con el prefijo de GitHub Pages
+        run: |
+          mkdir -p tmp/preview/PoliTechNews
+          cp -R dist/politechnews/browser/. tmp/preview/PoliTechNews/
+          python3 -m http.server 4200 --directory tmp/preview &
+          BASE_URL=http://127.0.0.1:4200/PoliTechNews/ npm test
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/politechnews/browser
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

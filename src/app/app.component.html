@@ -1,0 +1,23 @@
+<a class="skip-link" href="#contenido" (click)="$event.preventDefault(); content.focus()">Saltar al contenido</a>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" routerLink="/" aria-label="PoliTechNews, ir al inicio"><img src="assets/images/logo.png" alt="" width="44" height="44"><span>PoliTech<span class="brand-accent">News</span></span></a>
+  <button class="menu-toggle" type="button" [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'" [attr.aria-expanded]="menuOpen()" aria-controls="main-nav" (click)="menuOpen.set(!menuOpen())"><span></span><span></span><span></span></button>
+  <nav class="main-nav" [class.open]="menuOpen()" id="main-nav" aria-label="Navegación principal">
+    @for (link of links; track link.path) {
+      <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.exact}" ariaCurrentWhenActive="page">{{ link.label }}</a>
+    }
+  </nav>
+  <a class="button button-navy nav-cta" routerLink="/noticias">Explorar noticias</a>
+</div></header>
+<main id="contenido" #content tabindex="-1">
+  @if (news.loading()) { <div class="loading-panel" role="status">Cargando noticias…</div> }
+  @else if (news.loadError()) {
+    <section class="container section"><div class="empty-state" role="alert"><h1>No se pudieron cargar las noticias</h1><p>{{ news.loadError() }}</p><button class="button button-navy" (click)="news.load()">Reintentar</button></div></section>
+  } @else { <router-outlet /> }
+</main>
+<footer class="site-footer"><div class="container footer-grid">
+  <div><a class="footer-brand" routerLink="/">PoliTech<span>News</span></a><p>Conectando conocimiento, tecnología y futuro.</p></div>
+  <div><strong>Navegación</strong><p><a routerLink="/">Inicio</a> · <a routerLink="/noticias">Noticias</a> · <a routerLink="/favoritos">Favoritos</a></p><p><a routerLink="/gestion">Gestión</a> · <a routerLink="/contacto">Contacto</a></p></div>
+  <div><strong>Proyecto académico</strong><p>Politécnico Grancolombiano</p><p>© 2026 PoliTechNews</p></div>
+</div></footer>
+<div id="toast" class="toast" [class.show]="!!notices.message()" [class.error]="notices.kind() === 'error'" role="status" aria-live="polite">{{ notices.message() }}</div>

@@ -1,0 +1,18 @@
+/* Adaptaciones para componentes Angular y mensajes de validación. */
+app-root, app-home, app-news, app-detail, app-favorites, app-admin, app-contact,
+app-banner, app-pagination, app-empty-state { display: block; }
+app-news-card { display: block; min-width: 0; }
+app-news-card .news-card { height: 100%; }
+.form-error { color: #a12f38; font-size: 12px; margin: 0; }
+.stacked-form .ng-invalid.ng-touched { border-color: #a12f38; }
+.local-note { padding: 12px 16px; background: #eaf3f9; border-radius: 10px; font-size: 13px; }
+main:focus { outline: none; }
+.loading-panel { text-align: center; padding: 80px 24px; }
+.toast.error { background: #8f2531; }
+.table-actions { flex-wrap: wrap; }
+.table-actions .publish-action { color: #14855a; }
+.button:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
