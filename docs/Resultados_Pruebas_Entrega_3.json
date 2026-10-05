@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-05T17:07:16.127Z",
+  "base": "https://santycp.github.io/PoliTechNews/",
+  "angular": "22.2.1",
+  "result": "PASS",
+  "coverage": [
+    "navegación SPA", "JSON", "búsqueda", "filtros", "paginación",
+    "recarga de rutas", "favoritos", "orden", "validaciones", "archivos",
+    "publicación", "borradores", "eliminación", "escape HTML", "contacto",
+    "móvil", "Storage corrupto", "cuota", "error de red y reintento"
+  ],
+  "errors": []
+}

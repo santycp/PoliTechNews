@@ -48,7 +48,16 @@ Destino: [PoliTechNews en GitHub Pages](https://santycp.github.io/PoliTechNews/)
 
 El flujo `pages.yml` ejecuta `npm ci`, compila con `--base-href /PoliTechNews/`, prueba la aplicación bajo ese prefijo y publica el resultado. El origen de Pages se configura como **GitHub Actions**. Las rutas usan hash (`#/noticias/ia-aulas`) para que las recargas funcionen en alojamiento estático. Los pushes que solo cambian documentos no reconstruyen el sitio; se puede ejecutar el flujo manualmente.
 
-La Entrega 3 requiere un PDF final y un video de YouTube de máximo 3 minutos. El video debe grabarse y publicarse por el estudiante; el guion se encuentra en [docs/Guion_Video_Entrega_3.md](docs/Guion_Video_Entrega_3.md).
+El despliegue público y el recorrido automatizado se verificaron el **5 de octubre de 2026**. La prueba cubre diecinueve áreas: rutas, JSON, búsqueda, filtros, paginación, favoritos, formularios, publicaciones, persistencia, fallos y móvil.
+
+### Entregables finales
+
+- [Informe APA de la Entrega 3 en PDF](output/pdf/PoliTechNews_Entrega_3.pdf).
+- [Informe editable en Word](output/docx/PoliTechNews_Entrega_3.docx).
+- [Arquitectura](docs/Arquitectura_Entrega_3.md).
+- [Guion de video de 2 minutos y 50 segundos](docs/Guion_Video_Entrega_3.md).
+
+Fecha límite: **10 de octubre de 2026**. El video de YouTube de máximo 3 minutos debe grabarse y publicarse por el estudiante. **Pendiente:** incorporar su enlace real al informe y a este README antes de entregar. El guion no sustituye el video.
 
 ## Versión conservada de la Entrega 2
 
